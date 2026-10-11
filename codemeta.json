@@ -8,8 +8,12 @@
   "dateModified": "2026-10-11",
   "license": "https://spdx.org/licenses/MIT",
   "codeRepository": "https://github.com/annefou/logrono-future-rainfall-flood-risk",
-  "identifier": "{{ZENODO_DOI}}",
-  "@id": "{{ZENODO_DOI}}",
+  "identifier": [
+    "https://doi.org/10.5281/zenodo.23299756",
+    "https://doi.org/10.5281/zenodo.23299757",
+    "swh:1:rev:6e320c05e0713a5a7072dd9719cd60c48b0fd393;origin=https://github.com/annefou/logrono-future-rainfall-flood-risk"
+  ],
+  "@id": "https://doi.org/10.5281/zenodo.23299756",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "Python",
