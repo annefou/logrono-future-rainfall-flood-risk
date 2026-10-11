@@ -1,17 +1,21 @@
 # Published nanopub chain — URI registry
 
-This file is the canonical registry of published nanopub URIs for this replication. Update it as you publish each step.
+This file is the canonical registry of published nanopub URIs for this chain: *Does heavier future rainfall put more residents of Logroño in buildings at pluvial flood risk?* (question-rooted, built on the [Logroño flood-adaptation scenarios analysis v0.1.0](https://doi.org/10.5281/zenodo.23298913); outcome repository: release v0.1.0, [10.5281/zenodo.23299757](https://doi.org/10.5281/zenodo.23299757)).
+
+**Finding (AIDA):** *Heavier future design rainfall increases the number of residents of Logroño living in buildings at pluvial flood risk.* Outcome: validated, moderate confidence.
+
+View a step in the Science Live viewer: `https://platform.sciencelive4all.org/np/?uri=<URI>`.
 
 ## Chain
 
 | Step | Template | URI | Published |
 |---|---|---|---|
-| 01 | Quote-with-comment (or PICO / PCC) | _not yet published_ | |
-| 02 | AIDA Sentence | _not yet published_ | |
-| 03 | FORRT Claim | _not yet published_ | |
-| 04 | FORRT Replication Study | _not yet published_ | |
-| 05 | FORRT Replication Outcome | _not yet published_ | |
-| 06 | CiTO Citation | _not yet published_ | |
+| 01 | PICO research question | https://w3id.org/sciencelive/np/RA1ie41HvIhkHyl30NuituUk1VQ2O3Cfmi66cSKGKcmm0 | 2026-10-11 |
+| 02 | AIDA Sentence | https://w3id.org/sciencelive/np/RAPHRcwvvQOcGcpd18nU1oKjSUjtcAZqYZm4EjtY6uI9c | 2026-10-11 |
+| 03 | FORRT Claim | https://w3id.org/sciencelive/np/RAmPuKhabwAcdWD2REKSoI13U1lx9Xcoy_2DP6PamUNsc | 2026-10-11 |
+| 04 | FORRT Replication Study | https://w3id.org/sciencelive/np/RAThqKT7ifVfTfBji_cZkQEl8j8ndcpypt4heMadXsIp8 | 2026-10-11 |
+| 05 | FORRT Replication Outcome | https://w3id.org/sciencelive/np/RA0Xdfwi2iNgVwH3KD4Bx5-pZ4JqKAt3-I4iyJSojbfCg | 2026-10-11 |
+| 06 | CiTO Citation | https://w3id.org/sciencelive/np/RAwDNLtJ-iEQUlF4ywPwiRBHmiwYakaQI9MZb9MrBN2_Y | 2026-10-11 |
 
 ## Optional layers
 
