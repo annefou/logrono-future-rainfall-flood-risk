@@ -1,0 +1,15 @@
+{
+  "aida": "Heavier future design rainfall increases the number of residents of Logroño living in buildings at pluvial flood risk.",
+  "residents_at_risk_higher_in_every_case": true,
+  "cases_checked": 42,
+  "buildings_moving_down_a_class": 0,
+  "residents_increase_range_either": [
+    555.9852237922751,
+    3021.420163857103
+  ],
+  "residents_increase_pct_range_either": [
+    1.487552301441153,
+    9.514423669967043
+  ],
+  "holds": true
+}
