@@ -4,7 +4,7 @@
   "chain_shape": "pico",
   "source": {
     "repository": "https://github.com/annefou/logrono-future-rainfall-flood-risk",
-    "commit": "c9d1beed21c9cc8ca6b51cbdfec7b044a9c7a2cd",
+    "commit": "d14c97cc20f365dafac09cce73ac9e207a5f5a97",
     "figure": "figures/main_result.png"
   },
   "steps": [

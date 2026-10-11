@@ -1,8 +1,8 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "logrono-future-rainfall-flood-risk",
-  "description": "Does heavier future rainfall put more residents of Logroño (Spain) at building-level pluvial flood risk? One FORRT chain, built on the Logroño flood-adaptation scenarios analysis.",
+  "name": "Future rainfall and building-level pluvial flood risk in Logroño",
+  "description": "Does heavier future rainfall put more residents of Logroño (Spain) in buildings at pluvial flood risk? Using the result tables of the Logroño flood-adaptation scenarios analysis (v0.1.0), this repository compares present and future (EURO-CORDEX median and 90th percentile) REACHOUT design rainfall, with the current green cover, for every return period from 2 to 200 years, and checks the future rainfall against the Destination Earth Climate DT. It holds one FORRT nanopublication chain (question-rooted) and its headline figure.",
   "version": "0.1.0",
   "dateCreated": "2026-10-11",
   "dateModified": "2026-10-11",
@@ -15,7 +15,10 @@
     "name": "Python",
     "version": "3.12"
   },
-  "operatingSystem": ["Linux", "macOS"],
+  "operatingSystem": [
+    "Linux",
+    "macOS"
+  ],
   "author": [
     {
       "@type": "Person",
@@ -29,8 +32,12 @@
     }
   ],
   "keywords": [
-    "replication",
-    "reproducibility",
+    "pluvial flooding",
+    "flood risk",
+    "climate change",
+    "extreme rainfall",
+    "Logroño",
+    "Destination Earth",
     "FORRT",
     "nanopublication",
     "Science-Live"
@@ -45,5 +52,30 @@
     "@type": "Organization",
     "name": "Science Live",
     "url": "https://platform.sciencelive4all.org"
-  }
+  },
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "logrono-flood-adaptation-scenarios",
+      "version": "0.1.0",
+      "identifier": "https://doi.org/10.5281/zenodo.23298913"
+    }
+  ],
+  "citation": [
+    {
+      "@id": "https://doi.org/10.5194/nhess-26-2765-2026"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.23298913"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.14035876"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.14035736"
+    },
+    {
+      "@id": "https://doi.org/10.21957/79c6af3105"
+    }
+  ]
 }
