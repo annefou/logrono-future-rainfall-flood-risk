@@ -14,7 +14,7 @@ Atomic, Independent, Declarative, Absolute. One empirical finding. Must end with
 > _If your draft AIDA contains "and" linking two distinct findings, split into two AIDA nanopubs._
 
 ```
-
+Heavier future design rainfall increases the number of residents of Logroño living in buildings at pluvial flood risk.
 ```
 
 <!-- field: topic -->
@@ -23,7 +23,9 @@ Atomic, Independent, Declarative, Absolute. One empirical finding. Must end with
 Predefined topic vocabulary — list the labels you intend to pick from the dropdown.
 
 ```
-
+urban flooding (Q15909735)
+flood risk (Q2288778)
+climate change adaptation (Q260607)
 ```
 
 <!-- field: project -->
@@ -45,8 +47,8 @@ Pull the URI from `nanopubs/PUBLISHED.md`.
 
 DOIs/URLs of datasets that ground the AIDA claim.
 
-- _DOI 1: ___
-- _DOI 2: ___
+- https://doi.org/10.5281/zenodo.14035876
+- https://doi.org/10.5281/zenodo.23298913
 
 <!-- field: publication -->
 ### Supported by other publications (text input, optional)

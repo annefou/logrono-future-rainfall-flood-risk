@@ -4,7 +4,8 @@
   "chain_shape": "pico",
   "source": {
     "repository": "https://github.com/annefou/logrono-future-rainfall-flood-risk",
-    "commit": "dcb1a707c33da37d655fd626fb704dbc12987a63"
+    "commit": "e661eb5abf52bf8d571dab20ec10bd7f7ce0cef8",
+    "figure": "figures/main_result.png"
   },
   "steps": [
     {
@@ -40,7 +41,36 @@
       "step": "02_aida",
       "template_key": "AIDA_SENTENCE",
       "template_uri": "https://w3id.org/np/RALmXhDw3rHcMveTgbv8VtWxijUHwnSqhCmtJFIPKWVaA",
-      "prefill": {},
+      "prefill": {
+        "aida": "Heavier future design rainfall increases the number of residents of Logroño living in buildings at pluvial flood risk.",
+        "topic": [
+          {
+            "uri": "http://www.wikidata.org/entity/Q15909735",
+            "label": "urban flooding"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q2288778",
+            "label": "flood risk"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q260607",
+            "label": "climate change adaptation"
+          }
+        ],
+        "st3": [
+          {
+            "dataset": "https://doi.org/10.5281/zenodo.14035876"
+          },
+          {
+            "dataset": "https://doi.org/10.5281/zenodo.23298913"
+          }
+        ]
+      },
+      "provenance": {
+        "aida": "nanopubs/drafts/02_aida.md",
+        "topic": "nanopubs/drafts/02_aida.md + Wikidata",
+        "st3": "nanopubs/drafts/02_aida.md"
+      },
       "published_uri": null
     },
     {
@@ -48,11 +78,15 @@
       "template_key": "FORRT_CLAIM",
       "template_uri": "https://w3id.org/np/RAZWyM8D16ya3S1zhCvrG1f0iSpd9-8onVWp0FTvvX7LQ",
       "prefill": {
-        "claim": "annefou-logrono-future-rainfall-flood-risk-claim",
+        "claim": "logrono-future-rainfall-flood-risk-claim",
+        "label": "Future design rainfall increases residents in buildings at pluvial flood risk in Logroño",
+        "forrtType": "https://w3id.org/sciencelive/o/terms/descriptive_pattern-FORRT-Claim",
         "source": "https://doi.org/10.5194/nhess-26-2765-2026"
       },
       "provenance": {
-        "claim": "derived (<org>-<repo>-<step>)",
+        "claim": "nanopubs/drafts/03_claim.md",
+        "label": "nanopubs/drafts/03_claim.md",
+        "forrtType": "nanopubs/drafts/03_claim.md",
         "source": "CITATION.cff"
       },
       "manual": [
@@ -65,10 +99,48 @@
       "template_key": "FORRT_REPLICATION",
       "template_uri": "https://w3id.org/np/RAuLEjPp-4dTvPwMkfHggTto1CgjIftiGRAgHlyeEonjQ",
       "prefill": {
-        "study": "annefou-logrono-future-rainfall-flood-risk-study"
+        "study": "logrono-future-rainfall-flood-risk-study",
+        "label": "Building-level pluvial flood risk in Logroño under present and future design rainfall (REACHOUT scenarios)",
+        "type": "https://w3id.org/sciencelive/o/terms/Replication-Study",
+        "scope": "Whether the number of residents living in buildings at pluvial flood risk in Logroño (Spain) increases when present-day design rainfall is replaced by the heavier design rainfall of future climate scenarios, with the city's current green cover held fixed. In scope: every residential building inside the area modelled by all flood scenarios; the seven design storms of REACHOUT (return periods of 2 to 200 years); both future scenarios (EURO-CORDEX median and 90th percentile); both risk indices of the framework (risk to well-being, risk to mobility and accessibility) and either of them; the movement of buildings between risk classes defined on present-day conditions; which future storm carries today's 100-year rainfall. Also in scope, as context, how plausible the future rainfall is, compared with the Destination Earth Climate DT. Out of scope: changes in land cover or nature-based solutions (separate chains), population change (residents fixed at the 2021 census), sewers, absolute flood depths, and the validity of social vulnerability, which no impact data can test. This is an application of the Vogelbacher et al. (2026) framework to climate scenarios, not a re-test of a claim of that paper.",
+        "methodology": "Data and pipeline: the shared analysis Logroño flood-adaptation scenarios, release v0.1.0 (10.5281/zenodo.23298913), whose result tables this chain reads (its pipeline can be re-run from the same repository). Flood hazard: REACHOUT pluvial flood maps for Logroño (Staccione and Pal, 10.5281/zenodo.14035876), SaferRAIN, 2 m, 15-minute design storms; present rainfall from local station data, future rainfall scaled by the EURO-CORDEX change (2041-2070 vs 1976-2005, median and 90th percentile). The comparison is restricted to cells modelled in every scenario (NoData marks unmodelled cells, NaN dry ones). Flooded extents at depths of 30 to 100 cm are polygonised on the native grid, without resampling, and water bodies are removed. City inputs from the Logroño replication v0.1.1 (10.5281/zenodo.23285198): Cadastre buildings, census 2021 residents shared among buildings by dwellings, census-section vulnerability proxies, street area. Risk: building-climate-risk v0.2.1 (10.5281/zenodo.23285504) with the paper's settings (TOPSIS with entropy, weights children 0.3 / elderly people living alone 0.7 and welfare 0.5 / education 0.5; flood-sensitivity transform; hazard to well-being from a 2 m ring over depths of 30-100 cm; hazard to mobility from 5 / 15 / 30 m rings at 30 cm; risk = social vulnerability x exposure x hazard). Social vulnerability is ranked over all residential buildings of the city; a building is at risk when a risk index is above zero; classes use the replication's published limits for the 100-year storm and the present-day baseline's limits at other return periods. Measures: residents at risk under present and future rainfall at each return period; class transitions; the future return period whose rainfall equals today's 100-year rainfall. Rainfall plausibility: REACHOUT's change factors against its own EURO-CORDEX IDF data (10.5281/zenodo.14035736) and the Destination Earth Climate DT (10.21957/79c6af3105): generation-2 hourly precipitation (IFS-NEMO, SSP3-7.0, 2030-2049 vs 1990-2009) over La Rioja on HEALPix level 10, regional index-flood GEV (L-moments), 1,000 year resamples; and the storylines (IFS-FESOM nudged to ERA5, 2017-2024, five members, present and +2 °C).",
+        "deviation": "From the framework of Vogelbacher et al. (2026): (1) hazard model REACHOUT SaferRAIN (hydrostatic fill-and-spill with Green-Ampt infiltration, no sewer network, 15-minute storms) instead of VISDOM-SWMM; flood depths on a 2 m grid labelled UTM zone 32, not resampled; (2) census-section proxies for the vulnerability indicators, as in the Logroño replication; residents fixed at 2021; (3) comparison restricted to the area modelled by every scenario: 157 buildings (77 with residents, 1,851 residents) are left out; (4) class limits fixed on present-day conditions, so that a uniform increase of risk is not hidden by the authors' relative class rule. Future rainfall: (5) REACHOUT's factors cannot be reproduced exactly from its own EURO-CORDEX IDF file (closest: RCP8.5, 3-hour duration, within 0.055); changes estimated for 3-hour and longer durations are applied to 15-minute storms. Climate DT check: (6) single model (IFS-NEMO; IFS-FESOM and ICON hourly precipitation were not available through Polytope); hourly at best; (7) HEALPix cells selected on the sphere: on the WGS84 ellipsoid 41 of 125 cells (projections) and 10 of 28 (storylines) fall outside La Rioja; all changes are also computed over the cells inside on both conventions.",
+        "keywordSelection": [
+          {
+            "uri": "http://www.wikidata.org/entity/Q15909735",
+            "label": "urban flooding"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q2288778",
+            "label": "flood risk"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q260607",
+            "label": "climate change adaptation"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q111089542",
+            "label": "extreme rainfall"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q14325",
+            "label": "Logroño"
+          }
+        ],
+        "disciplineSelection": {
+          "uri": "http://www.wikidata.org/entity/Q42250",
+          "label": "hydrology"
+        }
       },
       "provenance": {
-        "study": "derived (<org>-<repo>-<step>)"
+        "study": "nanopubs/drafts/04_study.md",
+        "label": "nanopubs/drafts/04_study.md",
+        "type": "nanopubs/drafts/04_study.md",
+        "scope": "nanopubs/drafts/04_study.md",
+        "methodology": "nanopubs/drafts/04_study.md",
+        "deviation": "nanopubs/drafts/04_study.md",
+        "keywordSelection": "nanopubs/drafts/04_study.md + Wikidata",
+        "disciplineSelection": "nanopubs/drafts/04_study.md + Wikidata"
       },
       "manual": [
         "type"
