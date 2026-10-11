@@ -4,7 +4,7 @@
   "chain_shape": "pico",
   "source": {
     "repository": "https://github.com/annefou/logrono-future-rainfall-flood-risk",
-    "commit": "d14c97cc20f365dafac09cce73ac9e207a5f5a97",
+    "commit": "3dfa9c09ad66dab6545cc5df7c59a4535141a26c",
     "figure": "figures/main_result.png"
   },
   "steps": [
@@ -154,6 +154,7 @@
       "prefill": {
         "outcome": "logrono-future-rainfall-flood-risk-outcome",
         "label": "Future design rainfall increases residents at pluvial flood risk in Logroño in every scenario and return period",
+        "repo": "https://doi.org/10.5281/zenodo.23299757",
         "date": "2026-10-11",
         "validationStatus": "https://w3id.org/sciencelive/o/terms/Validated",
         "conclusion": "Validated. In Logroño (Spain), with the current green cover, the heavier future design rainfall of the REACHOUT scenarios puts more residents in buildings at pluvial flood risk than present-day rainfall in every case examined: all seven return periods (2 to 200 years), both future scenarios (EURO-CORDEX median and 90th percentile) and each risk index of the framework. No building moves to a lower risk class. In effect, today's 100-year storm becomes a 50-year storm under the median scenario and a 25-year storm under the 90th-percentile scenario. How large the increase is depends on how much heavier the rainfall becomes: REACHOUT's median scenario is of the same order as the Destination Earth Climate DT estimates for La Rioja, while its 90th-percentile scenario lies above all of them, so the larger increases are a high-end case.",
@@ -164,6 +165,7 @@
       "provenance": {
         "outcome": "nanopubs/drafts/05_outcome.md",
         "label": "nanopubs/drafts/05_outcome.md",
+        "repo": "CITATION.cff",
         "date": "CITATION.cff",
         "validationStatus": "nanopubs/drafts/05_outcome.md",
         "conclusion": "nanopubs/drafts/05_outcome.md",
