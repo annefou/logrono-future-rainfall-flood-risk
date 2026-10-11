@@ -64,7 +64,8 @@ print(change[change["risk"] == "either"].round(1).to_string(index=False))
 # %%
 moves = transitions.assign(direction=np.sign(transitions["to_class"] - transitions["from_class"]))
 moves = (moves.groupby(["variant", "climate", "rp", "risk", "direction"])[["buildings", "residents"]].sum()
-         .unstack("direction", fill_value=0))
+         .unstack("direction", fill_value=0)
+         .reindex(columns=pd.MultiIndex.from_product([["buildings", "residents"], [-1, 0, 1]]), fill_value=0))
 moves.columns = [f"{m}_{ {-1: 'down', 0: 'same', 1: 'up'}[d]}" for m, d in moves.columns]
 moves = moves.reset_index()
 moves.to_csv(RESULTS / "class_moves.csv", index=False)
@@ -117,7 +118,7 @@ claim = {
             "at pluvial flood risk.",
     "residents_at_risk_higher_in_every_case": bool((change[[f"{c}_minus_present" for c in FUTURE]] > 0).all().all()),
     "cases_checked": int(len(change) * len(FUTURE)),
-    "buildings_moving_down_a_class": int(moves[[c for c in moves.columns if c.startswith("buildings_down")]].sum().sum()),
+    "buildings_moving_down_a_class": int(moves["buildings_down"].sum()),
     "residents_increase_range_either": [float(either[[f"{c}_minus_present" for c in FUTURE]].min().min()),
                                         float(either[[f"{c}_minus_present" for c in FUTURE]].max().max())],
     "residents_increase_pct_range_either": [float(either[[f"{c}_pct" for c in FUTURE]].min().min()),
