@@ -19,7 +19,7 @@
 Slug becomes part of the nanopub URI. Use kebab-case.
 
 ```
-
+logrono-future-rainfall-flood-risk
 ```
 
 <!-- field: label -->
@@ -28,7 +28,7 @@ Slug becomes part of the nanopub URI. Use kebab-case.
 10-200 characters. Length-bounded.
 
 ```
-
+Does heavier future rainfall put more residents of Logroño at building-level pluvial flood risk?
 ```
 
 <!-- field: description -->
@@ -37,7 +37,7 @@ Slug becomes part of the nanopub URI. Use kebab-case.
 One coherent sentence/paragraph that names P, I, C, O inline.
 
 ```
-
+In Logroño (Spain), compared with present-day design rainfall, how does the heavier design rainfall expected under future climate change alter building-level pluvial flood risk: how many residents live in buildings at risk, and how do buildings move between risk classes?
 ```
 
 <!-- field: type -->
@@ -47,7 +47,7 @@ One coherent sentence/paragraph that names P, I, C, O inline.
 - [ ] descriptive research question - (What are the characteristics of X?)
 - [ ] effectiveness research question - (Does approach X work better than Y?)
 - [ ] experience research question - (How do people experience phenomenon X?)
-- [ ] prediction research question - (What outcomes can we expect from X?)
+- [x] prediction research question - (What outcomes can we expect from X?)
 
 <!-- field: populationDescription -->
 ### Description of the population (textarea, required)
@@ -55,7 +55,7 @@ One coherent sentence/paragraph that names P, I, C, O inline.
 Who/what is being studied. Discipline-level concept — not implementation. See `docs/pico-study-outcome-levels.md`.
 
 ```
-
+Residential buildings and their residents in Logroño (La Rioja, Spain), a mid-sized city exposed to pluvial flooding from short, intense rainstorms.
 ```
 
 <!-- field: interventionGroupDescription -->
@@ -64,7 +64,7 @@ Who/what is being studied. Discipline-level concept — not implementation. See 
 The intervention or exposure being examined. Discipline-level concept.
 
 ```
-
+Heavier design rainstorms representing future climate conditions, with the city's land cover unchanged.
 ```
 
 <!-- field: comparatorGroupDescription -->
@@ -73,7 +73,7 @@ The intervention or exposure being examined. Discipline-level concept.
 The comparison or control condition. Discipline-level concept.
 
 ```
-
+Present-day design rainstorms of the same return periods, with the same land cover.
 ```
 
 <!-- field: outcomeGroupDescription -->
@@ -82,7 +82,7 @@ The comparison or control condition. Discipline-level concept.
 What outcomes are being measured. The kind of measurement, not the value.
 
 ```
-
+Building-level pluvial flood risk combining flood hazard, exposure and social vulnerability: the number of residents in buildings at risk, and the movement of buildings between risk classes defined on present-day conditions.
 ```
 
 ## Publication note
